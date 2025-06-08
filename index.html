@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>MT</title>
+    
+</head>
+<body>
+    <div class="all_notes">
+        <button class="button_add_note">Click Me!</button>
+        <div class="note">
+            <h1>title</h1>
+            <p>desc</p>
+        </div>
+
+        <div class="note">
+            <h1>title</h1>
+            <p>desc</p>
+        </div>
+
+        <div class="note">
+            <h1>title</h1>
+            <p>desc</p>
+        </div>
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <select id="themeSelect" title="Оберіть тему" aria-label="Оберіть тему">
+    <option value="default">Світла</option>
+    <option value="dark">Темна</option>
+    <option value="blue">Синя</option>
+    <option value="green">Зелена</option>
+    <option value="pink">Рожева</option>
+  </select>
+
+  <div class="container">
+    <button id="addNoteBtn">Add New Note</button>
+    <div id="notesContainer"></div>
+  </div>
+
+  <div id="noteModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Нова нотатка</h3>
+      <label>Назва:<br />
+        <input type="text" id="noteTitle" maxlength="50" />
+      </label>
+      <label>Опис:<br />
+        <textarea id="noteDesc" rows="4" maxlength="300"></textarea>
+      </label>
+      <div class="modal-buttons">
+        <button id="saveNote">Зберегти</button>
+        <button id="cancelNote">Відміна</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
