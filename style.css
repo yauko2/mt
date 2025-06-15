@@ -31,7 +31,12 @@
 } */
 
 
-
+.all_notes
+{
+    display: grid;
+    grid-template-columns: repeat(5, 230px);
+    gap: 15px;
+}
 
 :root {
   --bg-color: #f9f9f9;
@@ -43,30 +48,39 @@
 }
 
 body {
-  margin: 0;
+  margin: 50px;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--note-text);
 }
 
 .container {
-  padding: 20px;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-#addNoteBtn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border: none;
-  padding: 10px 20px;
+  padding: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10%;
   flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: flex-end;
+  margin: 0 auto;
 }
-
+.container p 
+{
+  font-size: 150px;
+  margin: 0;
+}
+#addNoteBtn
+{
+  background: none;
+  border: none;
+  color: var(--btn-text);
+}
 #notesContainer {
   display: flex;
   flex-wrap: wrap;
@@ -83,10 +97,13 @@ body {
   padding: 10px 12px;
   box-sizing: border-box;
   width: 220px;
+  min-height: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+    margin-left: 50px;
+  margin-top: 50px;
 }
 
 .note-title {
@@ -216,9 +233,9 @@ body {
 /* Темна */
 .dark-theme {
   --bg-color: #222;
-  --btn-bg: #ff5722;
+  --btn-bg: #aa6b30;
   --btn-text: white;
-  --note-bg: #333;
+  --note-bg: #4e4c4c;
   --note-text: #eee;
   --modal-bg: rgba(0,0,0,0.75);
 }
@@ -251,4 +268,14 @@ body {
   --note-bg: #f8bbd0;
   --note-text: #880e4f;
   --modal-bg: rgba(0,0,0,0.5);
+}
+
+
+#starsCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* щоб кліки проходили */
+  z-index: 0; /* позаду всього */
 }

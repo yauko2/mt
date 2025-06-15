@@ -1,36 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>MT</title>
-    
-</head>
-<body>
-    <div class="all_notes">
-        <button class="button_add_note">Click Me!</button>
-        <div class="note">
-            <h1>title</h1>
-            <p>desc</p>
-        </div>
-
-        <div class="note">
-            <h1>title</h1>
-            <p>desc</p>
-        </div>
-
-        <div class="note">
-            <h1>title</h1>
-            <p>desc</p>
-        </div>
-    </div>
-
-</body>
-</html> -->
-
-
 
 <!DOCTYPE html>
 <html lang="uk">
@@ -40,6 +7,10 @@
   <title>Notes App</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+
+<canvas id="starsCanvas"></canvas>
+
 <body>
   <select id="themeSelect" title="Оберіть тему" aria-label="Оберіть тему">
     <option value="default">Світла</option>
@@ -49,10 +20,16 @@
     <option value="pink">Рожева</option>
   </select>
 
-  <div class="container">
+  <div class="container" id="add">
+     <p>+</p>
     <button id="addNoteBtn">Add New Note</button>
+    
     <div id="notesContainer"></div>
   </div>
+
+<div class="all_notes">
+
+</div>
 
   <div id="noteModal" class="modal hidden">
     <div class="modal-content">
@@ -69,6 +46,8 @@
       </div>
     </div>
   </div>
+
+
 
   <script src="script.js"></script>
 </body>
